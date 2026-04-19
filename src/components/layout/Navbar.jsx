@@ -2,21 +2,23 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const navLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Industries', path: '/industries' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Blog', path: '/blog' },
-  { label: 'Contact', path: '/contact' },
-];
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const { t, toggleLang } = useLanguage();
+
+  const navLinks = [
+    { labelKey: 'nav_home', path: '/' },
+    { labelKey: 'nav_about', path: '/about' },
+    { labelKey: 'nav_services', path: '/services' },
+    { labelKey: 'nav_industries', path: '/industries' },
+    { labelKey: 'nav_portfolio', path: '/portfolio' },
+    { labelKey: 'nav_blog', path: '/blog' },
+    { labelKey: 'nav_contact', path: '/contact' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -52,16 +54,19 @@ export default function Navbar() {
                   location.pathname === link.path ? 'text-primary' : 'text-foreground/70'
                 }`}
               >
-                {link.label}
+                {t(link.labelKey)}
               </Link>
             ))}
           </div>
 
           {/* Language + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <button className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-foreground/70 hover:text-foreground transition-colors">
+            <button
+              onClick={toggleLang}
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border text-sm text-foreground/70 hover:text-foreground hover:border-primary/50 transition-colors"
+            >
               <Globe className="w-3.5 h-3.5" />
-              <span>العربية</span>
+              <span>{t('lang_switch')}</span>
             </button>
             <button
               className="md:hidden text-foreground"
@@ -91,12 +96,15 @@ export default function Navbar() {
                     location.pathname === link.path ? 'text-primary' : 'text-foreground/70'
                   }`}
                 >
-                  {link.label}
+                  {t(link.labelKey)}
                 </Link>
               ))}
-              <button className="flex items-center gap-1.5 text-sm text-foreground/70 py-2">
+              <button
+                onClick={toggleLang}
+                className="flex items-center gap-1.5 text-sm text-foreground/70 py-2 hover:text-primary transition-colors"
+              >
                 <Globe className="w-3.5 h-3.5" />
-                <span>العربية</span>
+                <span>{t('lang_switch')}</span>
               </button>
             </div>
           </motion.div>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Heart, Building2, Users, TrendingUp, Globe, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -10,11 +11,16 @@ const fadeUp = {
 };
 
 export default function Industries() {
+  const { t } = useLanguage();
+
+  const ngoFeatures = ['ind_ngo_f1','ind_ngo_f2','ind_ngo_f3','ind_ngo_f4'];
+  const tradeFeatures = ['ind_trade_f1','ind_trade_f2','ind_trade_f3','ind_trade_f4'];
+
   return (
     <div className="bg-mesh pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center py-16">
-          <h1 className="text-5xl md:text-6xl font-black text-white mb-6 heading-underline">Industries We Serve</h1>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-6 heading-underline">{t('ind_page_title')}</h1>
         </motion.div>
 
         {/* NGOs */}
@@ -24,20 +30,18 @@ export default function Industries() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6">
                 <Heart className="w-7 h-7 text-white" />
               </div>
-              <h2 className="text-3xl font-black text-white mb-4">NGOs</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Driving impactful campaigns that amplify your mission and expand your reach.
-              </p>
+              <h2 className="text-3xl font-black text-white mb-4">{t('ind_ngo_title')}</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">{t('ind_ngo_desc')}</p>
               <ul className="space-y-3 mb-8">
-                {['Impactful awareness campaigns', 'Social media management', 'Visual identity design', 'Performance reporting & analytics'].map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm text-foreground/80">
+                {ngoFeatures.map((fk) => (
+                  <li key={fk} className="flex items-center gap-3 text-sm text-foreground/80">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                    {f}
+                    {t(fk)}
                   </li>
                 ))}
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm">
-                Get Started <ArrowRight className="w-4 h-4" />
+                {t('ind_get_started')} <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
 
@@ -66,30 +70,24 @@ export default function Industries() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-6">
                 <Building2 className="w-7 h-7 text-white" />
               </div>
-              <h2 className="text-3xl font-black text-white mb-4">Trading Companies & Agencies</h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Scaling business growth with innovative automation and strategic marketing, establishing your brand NOW.
-              </p>
+              <h2 className="text-3xl font-black text-white mb-4">{t('ind_trade_title')}</h2>
+              <p className="text-muted-foreground leading-relaxed mb-6">{t('ind_trade_desc')}</p>
               <ul className="space-y-3 mb-8">
-                {['Integrated marketing strategies', 'Business process automation', 'Brand building', 'Lead generation'].map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm text-foreground/80">
+                {tradeFeatures.map((fk) => (
+                  <li key={fk} className="flex items-center gap-3 text-sm text-foreground/80">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                    {f}
+                    {t(fk)}
                   </li>
                 ))}
               </ul>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm">
-                Get Started <ArrowRight className="w-4 h-4" />
+                {t('ind_get_started')} <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
 
             <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.2 }} className="lg:order-1">
               <div className="rounded-2xl overflow-hidden border border-border">
-                <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop"
-                  alt="Corporate solutions"
-                  className="w-full h-80 object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop" alt="Corporate" className="w-full h-80 object-cover" />
               </div>
             </motion.div>
           </div>
