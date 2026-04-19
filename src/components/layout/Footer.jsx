@@ -20,11 +20,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">G</span>
-              </div>
-              <span className="font-bold text-white text-lg">Ghazara</span>
+            <div className="mb-4">
+              <img
+                src="https://media.base44.com/images/public/69e42c1d4afb4366bdd3f9ea/faadde957_IMG-20260220-WA0006.jpg"
+                alt="Ghazara Logo"
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               {t('footer_desc')}
