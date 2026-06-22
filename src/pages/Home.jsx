@@ -38,8 +38,8 @@ export default function Home() {
     <div className="bg-mesh">
       {/* Hero */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 relative overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-cyan-500/5 blur-3xl animate-pulse-glow" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-purple-600/5 blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#7039B5]/5 blur-3xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-[#D88A44]/5 blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="relative z-10 max-w-4xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm mb-8">
             <Sparkles className="w-4 h-4" />
             {t('hero_badge')}
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
             {t('hero_title')}
           </h1>
 
-          <p className="text-xl md:text-2xl gradient-text-cyan font-semibold mb-4">
+          <p className="text-xl md:text-2xl gradient-text-brand font-semibold mb-4">
             {t('hero_subtitle')}
           </p>
           <p className="text-muted-foreground text-lg mb-10">
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
-              className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity glow-cyan text-sm"
+              className="flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity glow-brand text-sm"
             >
               {t('hero_cta1')} <ArrowRight className="w-4 h-4" />
             </Link>
@@ -86,7 +86,7 @@ export default function Home() {
         >
           {stats.map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-4xl font-black gradient-text-cyan">{s.value}</div>
+              <div className="text-4xl font-black gradient-text-brand">{s.value}</div>
               <div className="text-muted-foreground text-sm mt-1">{s.label}</div>
             </div>
           ))}
@@ -119,7 +119,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 {aboutStats.map((s) => (
                   <div key={s.label} className="bg-card border border-border rounded-2xl p-6 text-center">
-                    <div className="text-3xl font-black gradient-text-cyan">{s.value}</div>
+                    <div className="text-3xl font-black gradient-text-brand">{s.value}</div>
                     <div className="text-muted-foreground text-sm mt-1">{s.label}</div>
                   </div>
                 ))}
@@ -147,7 +147,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="group bg-card border border-border rounded-2xl p-6 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center mb-4">
                   <s.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3">{t(s.titleKey)}</h3>
@@ -170,8 +170,8 @@ export default function Home() {
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div {...fadeUp} className="bg-card border border-border rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4">
+            <motion.div {...fadeUp} className="bg-card border border-border rounded-2xl p-8 hover:border-primary/40 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7039B5] to-[#D88A44] flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{t('ind_ngo_title')}</h3>
@@ -180,8 +180,8 @@ export default function Home() {
                 {t('about_learn')} <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </motion.div>
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="bg-card border border-border rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="bg-card border border-border rounded-2xl p-8 hover:border-primary/40 transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center mb-4">
                 <Building2 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{t('ind_trade_title')}</h3>
@@ -201,7 +201,7 @@ export default function Home() {
             <h2 className="text-4xl font-black text-white mb-4">{t('cta_title')}</h2>
             <p className="text-muted-foreground mb-8">{t('cta_desc')}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm">
+              <Link to="/contact" className="px-8 py-4 rounded-full bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity text-sm">
                 {t('cta_btn1')}
               </Link>
               <a

@@ -12,22 +12,24 @@
     --card-foreground: 0 0% 98%;
     --popover: 222 40% 8%;
     --popover-foreground: 0 0% 98%;
-    --primary: 187 100% 50%;
-    --primary-foreground: 222 47% 5%;
+    --primary: 267 52% 47%;
+    --primary-foreground: 0 0% 98%;
+    --primary-dark: 271 53% 35%;
     --secondary: 222 30% 12%;
     --secondary-foreground: 0 0% 90%;
     --muted: 222 30% 12%;
     --muted-foreground: 0 0% 55%;
-    --accent: 222 30% 14%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 28 66% 56%;
+    --accent-foreground: 222 47% 5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 30% 16%;
     --input: 222 30% 14%;
-    --ring: 187 100% 50%;
+    --ring: 267 52% 47%;
     --radius: 0.75rem;
-    --cyan: 187 100% 50%;
-    --purple: 265 89% 66%;
+    --brand: 267 52% 47%;
+    --brand-dark: 271 53% 35%;
+    --brand-accent: 28 66% 56%;
   }
 }
 
@@ -43,34 +45,34 @@
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+  background: linear-gradient(135deg, #7039B5, #D88A44);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.gradient-text-cyan {
-  background: linear-gradient(90deg, #00d4ff, #0099ff);
+.gradient-text-brand {
+  background: linear-gradient(90deg, #7039B5, #5B2A8A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 /* Glow effects */
-.glow-cyan {
-  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+.glow-brand {
+  box-shadow: 0 0 30px rgba(112, 57, 181, 0.3);
 }
 
-.glow-purple {
-  box-shadow: 0 0 30px rgba(124, 58, 237, 0.3);
+.glow-accent {
+  box-shadow: 0 0 30px rgba(216, 138, 68, 0.3);
 }
 
 /* Background mesh gradient */
 .bg-mesh {
   background: 
-    radial-gradient(ellipse at 20% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 100%, rgba(0, 153, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 50%, rgba(112, 57, 181, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(216, 138, 68, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(91, 42, 138, 0.06) 0%, transparent 50%),
     hsl(var(--background));
 }
 
@@ -80,7 +82,7 @@
   display: block;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  background: linear-gradient(90deg, #7039B5, #D88A44);
   margin: 12px auto 0;
   border-radius: 2px;
 }

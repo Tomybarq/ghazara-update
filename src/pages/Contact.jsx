@@ -84,7 +84,7 @@ export default function Contact() {
                     <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
                       rows={5} className="w-full bg-secondary border border-border rounded-xl px-4 py-3 text-foreground text-sm focus:outline-none focus:border-primary/60 transition-colors resize-none" />
                   </div>
-                  <button type="submit" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity">
+                  <button type="submit" className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity">
                     <Send className="w-4 h-4" />
                     {t('contact_send')}
                   </button>

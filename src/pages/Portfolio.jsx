@@ -36,7 +36,7 @@ export default function Portfolio() {
               onClick={() => setActive(f.key)}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 ${
                 active === f.key
-                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                  ? 'bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white shadow-lg'
                   : 'bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/40'
               }`}
             >

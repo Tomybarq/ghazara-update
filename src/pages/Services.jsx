@@ -19,14 +19,14 @@ export default function Services() {
       titleKey: 'svc1_title', descKey: 'svc1_desc',
       featureKeys: ['svc1_f1','svc1_f2','svc1_f3','svc1_f4','svc1_f5'],
       image: 'https://media.base44.com/images/public/69e424a0f318fadbc38a1597/2193b417c_IMG-20260405-WA0011.jpg',
-      gradient: 'from-cyan-500 to-blue-600',
+      gradient: 'from-[#7039B5] to-[#5B2A8A]',
     },
     {
       icon: Bot,
       titleKey: 'svc2_title', descKey: 'svc2_desc',
       featureKeys: ['svc2_f1','svc2_f2','svc2_f3','svc2_f4','svc2_f5'],
       image: 'https://media.base44.com/images/public/69e424a0f318fadbc38a1597/a659c61c1_00a20f218_generated_image.png',
-      gradient: 'from-purple-500 to-indigo-600',
+      gradient: 'from-[#7039B5] to-[#5B2A8A]',
       reverse: true,
     },
     {
@@ -34,14 +34,14 @@ export default function Services() {
       titleKey: 'svc3_title', descKey: 'svc3_desc',
       featureKeys: ['svc3_f1','svc3_f2','svc3_f3','svc3_f4','svc3_f5'],
       image: 'https://media.base44.com/images/public/69e424a0f318fadbc38a1597/717ace1db_786800e08_generated_image.png',
-      gradient: 'from-pink-500 to-rose-600',
+      gradient: 'from-[#D88A44] to-[#7039B5]',
     },
     {
       icon: Palette,
       titleKey: 'svc4_title', descKey: 'svc4_desc',
       featureKeys: ['svc4_f1','svc4_f2','svc4_f3','svc4_f4','svc4_f5'],
       image: 'https://media.base44.com/images/public/69e424a0f318fadbc38a1597/90a5ed12e_059574a85_generated_image.png',
-      gradient: 'from-orange-500 to-yellow-500',
+      gradient: 'from-[#D88A44] to-[#7039B5]',
       reverse: true,
     },
     {
@@ -49,7 +49,7 @@ export default function Services() {
       titleKey: 'svc5_title', descKey: 'svc5_desc',
       featureKeys: ['svc5_f1','svc5_f2','svc5_f3','svc5_f4','svc5_f5'],
       image: 'https://media.base44.com/images/public/69e424a0f318fadbc38a1597/975236873_1775417060139.png',
-      gradient: 'from-teal-500 to-cyan-600',
+      gradient: 'from-[#5B2A8A] to-[#7039B5]',
     },
   ];
 
@@ -85,7 +85,7 @@ export default function Services() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity text-sm"
                 >
                   {t('svc_get_started')} <ArrowRight className="w-4 h-4" />
                 </Link>

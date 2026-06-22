@@ -50,7 +50,7 @@ export default function About() {
           </motion.div>
           <motion.div {...fadeUp} className="max-w-sm mx-auto">
             <div className="bg-card border border-border rounded-2xl p-8 text-center">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-2xl font-black">A</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-1">Adnan Alhanashi</h3>
@@ -71,7 +71,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-card border border-border rounded-2xl p-6 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center mb-4">
                   <v.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{t(v.titleKey)}</h3>

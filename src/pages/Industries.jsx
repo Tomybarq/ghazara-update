@@ -27,7 +27,7 @@ export default function Industries() {
         <section className="py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7039B5] to-[#D88A44] flex items-center justify-center mb-6">
                 <Heart className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl font-black text-white mb-4">{t('ind_ngo_title')}</h2>
@@ -40,7 +40,7 @@ export default function Industries() {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity text-sm">
                 {t('ind_get_started')} <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -53,8 +53,8 @@ export default function Industries() {
                   { icon: Globe, label: 'Global Reach' },
                   { icon: ShieldCheck, label: 'Trust Building' },
                 ].map((item) => (
-                  <div key={item.label} className="bg-card border border-border rounded-xl p-5 flex flex-col items-center justify-center gap-3 hover:border-purple-500/40 transition-colors">
-                    <item.icon className="w-8 h-8 text-purple-400" />
+                  <div key={item.label} className="bg-card border border-border rounded-xl p-5 flex flex-col items-center justify-center gap-3 hover:border-primary/40 transition-colors">
+                    <item.icon className="w-8 h-8 text-primary" />
                     <span className="text-sm text-foreground/70 text-center">{item.label}</span>
                   </div>
                 ))}
@@ -67,7 +67,7 @@ export default function Industries() {
         <section className="py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp} className="lg:order-2">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center mb-6">
                 <Building2 className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl font-black text-white mb-4">{t('ind_trade_title')}</h2>
@@ -80,7 +80,7 @@ export default function Industries() {
                   </li>
                 ))}
               </ul>
-              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold hover:opacity-90 transition-opacity text-sm">
+              <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#7039B5] to-[#5B2A8A] text-white font-semibold hover:opacity-90 transition-opacity text-sm">
                 {t('ind_get_started')} <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>

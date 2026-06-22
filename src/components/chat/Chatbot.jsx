@@ -87,7 +87,7 @@ export default function Chatbot() {
         onClick={() => setOpen(o => !o)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg flex items-center justify-center glow-cyan"
+        className="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] text-white shadow-lg flex items-center justify-center glow-brand"
         aria-label="Open chat"
       >
         <AnimatePresence mode="wait">
@@ -116,8 +116,8 @@ export default function Chatbot() {
             dir={isRTL ? 'rtl' : 'ltr'}
           >
             {/* Header */}
-            <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border-b border-border">
-              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+            <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-[#7039B5]/20 to-[#5B2A8A]/20 border-b border-border">
+              <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center flex-shrink-0">
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -134,13 +134,13 @@ export default function Chatbot() {
               {messages.map((msg, i) => (
                 <div key={i} className={`flex gap-2 ${msg.role === 'user' ? (isRTL ? 'flex-row' : 'flex-row-reverse') : 'flex-row'}`}>
                   <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                    msg.role === 'assistant' ? 'bg-gradient-to-br from-cyan-500 to-blue-600' : 'bg-secondary'
+                    msg.role === 'assistant' ? 'bg-gradient-to-br from-[#7039B5] to-[#5B2A8A]' : 'bg-secondary'
                   }`}>
                     {msg.role === 'assistant' ? <Bot className="w-3.5 h-3.5 text-white" /> : <User className="w-3.5 h-3.5 text-muted-foreground" />}
                   </div>
                   <div className={`max-w-[75%] px-3 py-2 rounded-2xl text-sm leading-relaxed ${
                     msg.role === 'user'
-                      ? 'bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-tr-sm'
+                      ? 'bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] text-white rounded-tr-sm'
                       : 'bg-secondary text-foreground rounded-tl-sm'
                   }`}>
                     {msg.content}
@@ -149,7 +149,7 @@ export default function Chatbot() {
               ))}
               {loading && (
                 <div className="flex gap-2 flex-row">
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center flex-shrink-0">
                     <Bot className="w-3.5 h-3.5 text-white" />
                   </div>
                   <div className="bg-secondary px-4 py-3 rounded-2xl rounded-tl-sm">
@@ -175,7 +175,7 @@ export default function Chatbot() {
               <button
                 onClick={sendMessage}
                 disabled={!input.trim() || loading}
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white disabled:opacity-40 hover:opacity-90 transition-opacity flex-shrink-0"
+                className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#7039B5] to-[#5B2A8A] flex items-center justify-center text-white disabled:opacity-40 hover:opacity-90 transition-opacity flex-shrink-0"
               >
                 <Send className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
               </button>
